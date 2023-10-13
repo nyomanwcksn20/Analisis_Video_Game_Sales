@@ -48,18 +48,19 @@ Dari gambar diatas, saya mendapatkan informasi untuk kolom Rank, Name, Platform,
 
 ---
 
->Mengecek Data Unik 
+###Mengecek Data Unik 
+
 Pada tahap ini saya melakukan pengecekan untuk data pada kolom Platform, Genre dan Publisher. Pada tahap ini saya menggunakan kode `.unique` dan `.nunique` untuk melihat semua informasi setiap kolom tanpa ada data yang duplikat dan menghitung berapa jumlah data yang unik. Berikut hasil pengecekannya:
 
-### Platform
+#### Platform
 Terdapat 31 jenis platform yang berbeda pada kolom Platform, berikut list platformnya
 ![Platform](pic/3.%20Cek%20Platform.png)
 
-### Genre
+#### Genre
 Terdapat 12 jenis genre yang berbeda pada kolom Genre, berikut list genrenya
 ![Genre](pic/4.%20Cek%20Genre.png)
 
-### Publisher
+#### Publisher
 Terdapat 578 publisher pembuat game berbeda pada kolom Publisher, berikut list publishernya
 ![Publisher](pic/5.%20Cek%20Publisher.png) 
 
