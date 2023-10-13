@@ -39,7 +39,10 @@ Berikut adalah penjelasan untuk setiap kolom pada dataset ini:
 ## Proses Analisis
 Langkah awal yang saya lakukan pada proses ini adalah melakukan pengecekan data, dimana saya melakukan pengecekan ringkasan dataframe dengan menggunakan `.info()` dan `.isnull().sum()` untuk melihat jumlah null dari setiap kolom.
 
-![summary](pic/1.%20Cek%20Kolom.png) ![summary](pic/2.%20Cek%20Null.png) 
+<p align="center">
+  ![summary](pic/1.%20Cek%20Kolom.png) ![null](pic/2.%20Cek%20Null.png) 
+  <em>Summary dan Null</em>
+</p>
 
 Dari gambar diatas, saya mendapatkan informasi untuk kolom Rank, Name, Platform, Genre, NA_Sales, EU_Sales, JP_Sales, Other_Sales, Global_Sales memiliki 16598 data yang tidak null atau tidak ada data null, lalu untuk kolom Year memiliki 271 data null dan kolom Publisher memiliki 59 data yang  null.
 
