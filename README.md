@@ -48,20 +48,33 @@ Dari gambar diatas, saya mendapatkan informasi untuk kolom Rank, Name, Platform,
 
 ---
 
-### Mengecek Data Unik 
+#### Mengecek Data Unik 
 
-Pada tahap ini saya melakukan pengecekan untuk data pada kolom Platform, Genre dan Publisher. Pada tahap ini saya menggunakan kode `.unique` dan `.nunique` untuk melihat semua informasi setiap kolom tanpa ada data yang duplikat dan menghitung berapa jumlah data yang unik. Berikut hasil pengecekannya:
+Pada tahap ini saya melakukan pengecekan untuk data pada kolom Platform, Genre dan Publisher. Pada tahap ini saya menggunakan metode `.unique` dan `.nunique` untuk melihat semua informasi setiap kolom tanpa ada data yang duplikat dan menghitung berapa jumlah data yang unik. Berikut hasil pengecekannya:
 
-#### Platform
+##### Platform
 Terdapat 31 jenis platform yang berbeda pada kolom Platform, berikut list platformnya
 ![Platform](pic/3.%20Cek%20Platform.png)
 
-#### Genre
+##### Genre
 Terdapat 12 jenis genre yang berbeda pada kolom Genre, berikut list genrenya
 ![Genre](pic/4.%20Cek%20Genre.png)
 
-#### Publisher
+##### Publisher
 Terdapat 578 publisher pembuat game berbeda pada kolom Publisher, berikut list publishernya
 ![Publisher](pic/5.%20Cek%20Publisher.png) 
+
+---
+
+### Mencari 10 game dengan penjualan terbanyak
+Untuk mencari 10 game dengan penjualan terbanyak, hal pertama yang saya lakukan adalah mengelompokan data berdasarkan nama dan menjumlahkan kolom Global_Sales yang sudah dikelompokan berdasarkan nama, berikut kodenya `df.groupby('Name')['Global_Sales'].sum().reset_index()`.
+
+Langkah selanjutnya adalah mengurutkan data sebelumnya berdasarkan Kolom Global_Sales dari terbesar hingga terkecil dengan kode `grouped.sort_values(by='Global_Sales', ascending=False)`. 
+
+Langkah terakhir adalah mengambil 10 nama teratas setelah dilakukan sorting dengan kode `sorted_data.iloc[0:10,:]` dimana saya mengambil 10 baris dari index 0-9.
+
+Berikut hasil pencarian untuk 10 game dengan penjualan terbanyak
+![toptengame](pic/6.%20Hasil%20Top%2010%20Sales%20Game.png)
+![toptengamechart](pic/6.1%20Grafik%20Hasil%20Top%2010%20Sales%20Game.png)
 
 ---
