@@ -48,7 +48,7 @@ Dari gambar diatas, saya mendapatkan informasi untuk kolom Rank, Name, Platform,
 
 ---
 
-###Mengecek Data Unik 
+### Mengecek Data Unik 
 
 Pada tahap ini saya melakukan pengecekan untuk data pada kolom Platform, Genre dan Publisher. Pada tahap ini saya menggunakan kode `.unique` dan `.nunique` untuk melihat semua informasi setiap kolom tanpa ada data yang duplikat dan menghitung berapa jumlah data yang unik. Berikut hasil pengecekannya:
 
