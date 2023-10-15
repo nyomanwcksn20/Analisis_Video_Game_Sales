@@ -27,7 +27,7 @@ Berikut adalah penjelasan untuk setiap kolom pada dataset ini:
 ## Pertanyaan
 1. 10 Game dengan penjualan terbanyak?
 2. Genre game yang paling banyak dibuat?
-3. Platform yang paling sedikit memiliki game?
+3. Platform yang paling banyak memiliki game?
 4. Publisher dengan penjualan terbanyak?
     - Top 3 Game paling diminati dari publisher tersebut?
 5. Tahun berapa perilisan game tertinggi?
@@ -77,4 +77,30 @@ Berikut hasil pencarian untuk 10 game dengan penjualan terbanyak
 ![toptengame](pic/6.%20Hasil%20Top%2010%20Sales%20Game.png)
 ![toptengamechart](pic/6.1%20Grafik%20Hasil%20Top%2010%20Sales%20Game.png)
 
+Dari hasil diatas didapat 10 besar game dengan total penjualan terbanyak dimana game dengan penjualan tertinggi adalah Wii Sports dengan total penjualan 82.74 juta dan game dengan total penjualan terbanyak nomor 10 adalah New Super Mario Bros dengan total penjualan 30.01 juta.
+
 ---
+
+### Mancari genre game yang paling banyak dibuat
+Pada proses ini, untuk mencari jumlah genre yang paling banyak dibuat, pertama saya melakukan pengelompokan data berdasarkan genre dan menghitung jumlah elemen dari kelompok genre tersebut dengan kode `.groupby("Genre").size()`. 
+
+![topgenre](pic/7%20Hasil%20Sort%20Genre%20High%20to%20Low.png)
+![topgenrechart](pic/8.%20Grafik%20Genre.png)
+
+Dari gambar diatas didapatkan informasi bahwa untuk genre game yang paling banyak dibuat adalah genre Action dengan jumlah 3316 game dan genre paling sedikit adalah puzzle dengan jumlah game sebanyak 582.
+
+---
+
+### Mencari jumlah game dari setiap platform
+Untuk mencari jumlah game dari setiap platsform prosesnya sama dengan sebelumnya, pertama saya melakukan pengelompokan data berdasarkan platform dan menghitung jumlah elemen dari kelompok platform tersebut dengan kode `.groupby("Platform").size()`. 
+
+![topplatform](pic/7.2%20platform.png)
+
+Dari gambar diatas untuk platform dengan game terbanyak adalah DS yaitu dengan 2163 game dan diikuti oleh PS2 dengan 2161 game.
+
+---
+
+
+
+
+
