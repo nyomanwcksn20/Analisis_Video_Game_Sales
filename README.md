@@ -100,6 +100,35 @@ Dari gambar diatas untuk platform dengan game terbanyak adalah DS yaitu dengan 2
 
 ---
 
+### Mencari publisher yang merilis game terbanyak
+Pada proses ini saya mencari publisher yang merilis game terbanyak dengan cara melakukan pengelompokan data dari publisher dengan kondisi jika ada nama game yang sama pada kolom Name akan dihitung satu game. Berikut kode yang saya gunakan `df.groupby('Publisher')['Name'].nunique()`.
+
+![publisher](pic/8.1%20Publisher.png)
+
+Hasilnya dapat dilihat bahwa Namco Bandai Games adalah publisher yang paling banyak merilis game, yaitu sebanyak 776 game.
+
+Setelah saya mengetahui bahwa Namco Bandai Games adalah publisher yang paling banyak merilis game, selanjutnya saya mencari game dari Namco yang memiliki penjualan terbanyak. 
+Proses pertama yang saya lakukan adalah mengambil subset dari dataframe yang mana nilai kolom Publisher hanya Namco Bandai Games menggunakan kode `df_NBG = df[df['Publisher']=='Namco Bandai Games']` selanjutnya saya pengelompokan kolom Name dari dataset `df_NBG` dan menjumlahkan total penjualan berdasarkan kolom Global_Sales dengan kode `grouped = df_NBG.groupby('Name')['Global_Sales'].sum().reset_index()`.
+
+![publisher2](pic/8.1.2%20Publisher.png)
+
+Dari gambar diatas 3 game dari Namco Bandai Games yang memiliki penjualan tertinggi adalah Namco Museum, The Witcher 3: Wild Hunt dan Namco Museum: 50th Anniversary.
+
+---
+
+### Mencari tahun dengan perilisan game tertinggi
+Selanjutnya saya akan mencari tahun dengan perilisan game tertinggi, lalu game apa saja yang penjualannya tertinggi di tahun tersebut.
+
+Dikarenakan pada kolom Year terdapat data yang kosong (N/A) maka saya merubah bari yang bertuliskan N/A menjadi NaN dengan `df['Year'] = df['Year'].replace('N/A', np.nan)`, lalu baris yang berisi NaN di hapus dengan `.dropna` dan menetapkan nilainya kembali menjadi 0 dengan tipe data integer dengan kode `.fillna(0).astype(int)`.
+
+![listyear](pic/11.1.%20List%20Year.png)
+![graphyear](pic/11.%20Grafik%20Year.png)
+
+Dari gambar diatas saya mendapatkan informasi bahwa 2009 adalah tahun dimana perilisan game paling banyak. 
+
+Dari informasi itu selanjutnya saya mencari game dan genre yang paling banyak terjual pada tahun 2009.
+
+SOON!!!
 
 
 
