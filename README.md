@@ -25,7 +25,7 @@ Berikut adalah penjelasan untuk setiap kolom pada dataset ini:
 ---
 
 ## Pertanyaan
-1. 10 Game dengan penjualan terbanyak?
+1. Game dengan penjualan terbanyak?
 2. Genre game yang paling banyak dibuat?
 3. Platform yang paling banyak memiliki game?
 4. Publisher dengan penjualan terbanyak?
@@ -81,7 +81,7 @@ Dari hasil diatas didapat 10 besar game dengan total penjualan terbanyak dimana 
 ---
 
 ### Mancari genre game yang paling banyak dibuat
-Pada proses ini, untuk mencari jumlah genre yang paling banyak dibuat, pertama saya melakukan pengelompokan data berdasarkan genre dan menghitung jumlah elemen dari kelompok genre tersebut dengan kode `.groupby("Genre").size()`. 
+Pada proses ini, untuk mencari jumlah genre yang paling banyak dibuat, pertama saya melakukan penghapusan untuk nama game yang sama(duplikat) dengan cara `df.drop_duplicates(subset='Name')`. Selanjutnya saya menhitung setiap genre pada kolom Genre dengan metode `.value_counts()`.
 
 ![topgenre](pic/7%20Hasil%20Sort%20Genre%20High%20to%20Low.png)
 ![topgenrechart](pic/8.%20Grafik%20Genre.png)
@@ -156,4 +156,18 @@ Dari hasil diatas dapat disimpulkan untuk region dengan total penjualan game ter
 
 ### Mencari tahun dengan penjualan game terbanyak diseluruh dunia
 
+Untuk mencari tahun dengan penjualan tertinggi, langkah pertama yang sama lakukan adalah mengelompokan kolom Year terlebih dahulu lalu menjumlahkan kolom Global_Sales. Berikut kodenya `df.groupby('Year')['Global_Sales'].sum()`.
+
+![topyearsell](pic/14.1%20topsellallyear.png)
+![graphtopyearsell](pic/14.%20Diagram%20Garis.png)
+
+Dari gambar diatas untuk tahun dengan penjualan terbanyak adalah tahun 2008.
+
+---
+
+### Kesimpulan
+
+Dari proses yang saya lakukan dapat disimpulkan untuk game dengan total penjualan terbanyak adalah Wii Sports dengan total 82.74 juta, lalu untuk genre yang paling banyak dibuat dari tahun 1980-2020 adalah Action yaitu sebanyak 1923 game.
+
 SOON!!!
+(Revisi platform nanti)
