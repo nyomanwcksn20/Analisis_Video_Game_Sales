@@ -91,11 +91,11 @@ Dari gambar diatas didapatkan informasi bahwa untuk genre game yang paling banya
 ---
 
 ### Mencari jumlah game dari setiap platform
-Untuk mencari jumlah game dari setiap platsform prosesnya sama dengan sebelumnya, pertama saya melakukan pengelompokan data berdasarkan platform dan menghitung jumlah elemen dari kelompok platform tersebut dengan kode `.groupby("Platform").size()`. 
+Untuk mencari jumlah game dari setiap platsform prosesnya sama dengan sebelumnya, pertama saya melakukan penghapusan untuk nama game yang sama(duplikat) dan menghitung setiap platform pada kolom Platform.
 
 ![topplatform](pic/7.2%20platform.png)
 
-Dari gambar diatas untuk platform dengan game terbanyak adalah DS yaitu dengan 2163 game dan diikuti oleh PS2 dengan 2161 game.
+Dari gambar diatas untuk platform dengan game terbanyak adalah PS2 yaitu dengan 1861 game dan diikuti oleh DS dengan 1807 game.
 
 ---
 
@@ -167,7 +167,11 @@ Dari gambar diatas untuk tahun dengan penjualan terbanyak adalah tahun 2008.
 
 ### Kesimpulan
 
-Dari proses yang saya lakukan dapat disimpulkan untuk game dengan total penjualan terbanyak adalah Wii Sports dengan total 82.74 juta, lalu untuk genre yang paling banyak dibuat dari tahun 1980-2020 adalah Action yaitu sebanyak 1923 game.
+Dari proses yang saya lakukan dapat disimpulkan untuk game dengan total penjualan terbanyak adalah Wii Sports dengan total 82.74 juta, lalu untuk genre yang paling banyak dibuat dari tahun 1980-2020 adalah Action yaitu sebanyak 1923 game. Dan untuk platform yang memiliki game terbanyak adalah PS2 dengan jumlah game mencapai 1861.
 
-SOON!!!
-(Revisi platform nanti)
+Publisher yang merilis game paling banyak dari hasil analisis ini adalah Namco Bandai Game, dimana publisher ini merilis 776 game berbeda dan untuk game yang paling banyak dijual adalah Namco Museum, The Witcher 3: Wild Hunt dan Namco Museum: 50th Anniversary.
+
+Tahun 2009 adalah tahun dimana perilisan video game paling banyak yaitu sebanyak 1431 game. Lalu untuk game dengan penjualan tertinggi di tahun 2009 adalah Wii Sports Resort sebanyak 33 juta penjualan. Namun untuk hal itu tidak membuat tahun 2009 menjadi tahun dengan penjualan game terbanyak. Untuk tahun dengan penjualan game terbanyak berada di tahun 2008.
+
+Region yang memiliki penjualan game terbanyak adalah Amerika Utara dengan total penjualan 4,3 miliar lebih penjualan diikuti dengan Uni Eropa dengan total 2,4 miliar penjualan.
+
