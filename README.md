@@ -4,7 +4,7 @@ Proyek ini merupakan bagian dari pengembangan pribadi saya dalam memahami workfl
 
 ---
 
-Dataset [video_game_sales](video_game_sales) saya ambil dari website Kaggle. Pada data tersebut terdapat 11 Kolom dan 16599 baris.
+Dataset [video_game_sales.csv](video_game_sales.csv) saya ambil dari website Kaggle. Pada data tersebut terdapat 11 Kolom dan 16599 baris.
 
 Berikut adalah penjelasan untuk setiap kolom pada dataset ini:
 
@@ -143,6 +143,17 @@ Dari proses tersebut pada gambar diatas saya mendapat informasi bahwa genre yang
 
 ### Mencari jumlah penjualan game di setiap region
 
+Untuk mencari jumlah penjualan di setiap region, di sini saya membuat sebuah daftar yang disebut regions yang berisi nama kolom yang merepresentasikan penjualan game di wilayah yang berbeda dengan cara `regions = ['NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales']`. 
+
+Setelah membuat daftar regions, selanjutnya saya menjumlahkan setiap region dengan cara `regions_sales = df[regions].sum()`. Hasil dari perhitungan ini akan menghasilkan sebuah Series (serangkaian data) yang berisi total penjualan untuk masing-masing wilayah yang ada dalam daftar regions.
+
+![region](pic/10.%20Total%20Sale%20per%20Region.png)
+![graphregion](pic/9.%20Grafik%20Sale%20per%20Region.png)
+
+Dari hasil diatas dapat disimpulkan untuk region dengan total penjualan game terbanyak adalah Amerika Utara, diikuti oleh Uni Eropa dan Jepang. Lalu diluar ketiga region tersebut memiliki penjualan paling sedikit.
+
+---
+
+### Mencari tahun dengan penjualan game terbanyak diseluruh dunia
+
 SOON!!!
-
-
