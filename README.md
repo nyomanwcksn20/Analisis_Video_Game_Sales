@@ -32,9 +32,8 @@ Berikut adalah penjelasan untuk setiap kolom pada dataset ini:
     - Top 3 Game paling diminati dari publisher tersebut?
 5. Tahun berapa perilisan game tertinggi?
 	- 3 Game apa yang memiliki penjualan tertinggi pada tahun tersebut?
-	- Genre apa yang memiliki penjualan tertinggi pada tahun tersebut?
+	- Genre apa yang paling banyak dibuat pada tahun tersebut?
 6. Penjualan game pada region mana yang paling tinggi?
-	- Berapa total penjualannya?
 7. Tahun berapa penjualan game terbanyak di seluruh dunia?
 
 ---
@@ -117,7 +116,7 @@ Dari gambar diatas 3 game dari Namco Bandai Games yang memiliki penjualan tertin
 ---
 
 ### Mencari tahun dengan perilisan game tertinggi
-Selanjutnya saya akan mencari tahun dengan perilisan game tertinggi, lalu game apa saja yang penjualannya tertinggi di tahun tersebut.
+Selanjutnya saya akan mencari tahun dengan perilisan game tertinggi, lalu game apa saja yang penjualannya tertinggi di tahun tersebut dan genre apa yang paling banyak dibuat pada tahun tersebut.
 
 Dikarenakan pada kolom Year terdapat data yang kosong (N/A) maka saya merubah bari yang bertuliskan N/A menjadi NaN dengan `df['Year'] = df['Year'].replace('N/A', np.nan)`, lalu baris yang berisi NaN di hapus dengan `.dropna` dan menetapkan nilainya kembali menjadi 0 dengan tipe data integer dengan kode `.fillna(0).astype(int)`.
 
@@ -128,8 +127,22 @@ Dari gambar diatas saya mendapatkan informasi bahwa 2009 adalah tahun dimana per
 
 Dari informasi itu selanjutnya saya mencari game dan genre yang paling banyak terjual pada tahun 2009.
 
+Untuk pencarian game terlaris di 2009 pertama saya melakukan filter pada kolom Year dengan kode `df_2009 = df[df['Year']==2009]`, dan melakukan pencarian dengan `df_2009.groupby('Name')['Global_Sales'].sum().reset_index()` dimana saya kelompokan Kolom nama dari dataframe yang sudah di filter ke tahun 2009 kemudian menjumlahkan total penjualan setiap game.
+
+![topgame2009](pic/12.%203%20Game%20dengan%20penjualan%20terbanyak%20tahun%202009.png)
+
+Dari proses diatas saya mendapatkan bahwa pada tahun 2009 game yang memiliki penjualan tertinggi adalah Wii Sports Resort, diikuti dengan game New Super Mario Bros. Wii dan Call of Duty: Modern Warfare 2.
+
+Lalu untuk mencari genre yang paling banyak dibuat pada tahun 2009 saya masih menggunakan dataframe yang sudah di filter yaitu `df_2009`, lalu mengelompokan kolom genre dan memakai kode `.size()`.
+
+![topgenre2009](pic/13%20Hasil%20Sort%20Genre%20High%20to%20Low%202009.png)
+
+Dari proses tersebut pada gambar diatas saya mendapat informasi bahwa genre yang paling banyak dibuat pada tahun 2009 adalah genre action yang mencapai 272 game.
+
+---
+
+### Mencari jumlah penjualan game di setiap region
+
 SOON!!!
-
-
 
 
